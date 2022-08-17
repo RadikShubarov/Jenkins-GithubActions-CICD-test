@@ -1,0 +1,18 @@
+name: CI Web to Ubuntu Servers
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: setup nginx
+        run: sudo apt install nginx
+      
+      - name: Git clone our repo
+        uses: actions/checkout@v3
+      - name: move to nginx home dir
+        run:  cp -R $PWD/Web-Equalizer /var/www/html 
+  

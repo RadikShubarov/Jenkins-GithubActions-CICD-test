@@ -1,4 +1,4 @@
-name: CI Web to Ubuntu Servers
+name: CI-Web-to-Ubuntu-Servers
 on:
   push:
     branches: [ "master" ]

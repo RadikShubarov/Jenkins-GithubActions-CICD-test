@@ -1,7 +1,5 @@
 FROM nginx:latest
 
-WORKDIR /Web-Equalizer
-
-COPY . /var/www/html
+COPY ./Web-Equalizer /var/www/html
 
 EXPOSE 80

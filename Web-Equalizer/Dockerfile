@@ -1,5 +1,7 @@
-FROM nginx:latest
+FROM ubuntu:latest
+
+RUN apt install nginx
 
 COPY . /var/www/html
 
-EXPOSE 80
+EXPOSE 80/tcp
